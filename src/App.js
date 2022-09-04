@@ -84,8 +84,8 @@ function App() {
         </div>
       </main>
 
-      <footer className="footer bg-dark">
-        <p className="text-white p-3 text-center">Desenvolvido com ReactJS e Bootstrap por <span className="text-warning">Pedro Lucas</span>.</p>
+      <footer className="footer bg-dark p-3">
+        <p className="text-white text-center mt-2">Desenvolvido com ReactJS e Bootstrap por <span className="text-warning">Pedro Lucas</span>.</p>
       </footer>
     </div>
   );
