@@ -1,4 +1,17 @@
+import { useState } from "react"
+
 function App() {
+
+  const [city, setCity] = useState("")
+
+  const handleChange = (event) => {
+    setCity(event.target.value)
+  }
+
+  const handleSearch = () => {
+    fetch(`http://api.weatherapi.com/v1/current.json?key=7a757c4b8a4e43afb1f111827220409&q=${city}&lang=pt`)
+  }
+
   return (
     <div>
       <nav className="navbar navbar-expand-md navbar-dark bg-dark mb-4">
@@ -17,7 +30,10 @@ function App() {
 
           <div className="row mb-4">
             <div className="col-md-6">
-              <input className="form-control"/>
+              <input 
+              onChange={handleChange} 
+              className="form-control" 
+              value={city}/>
             </div>
           </div>
 
